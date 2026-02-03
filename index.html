@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz du Monde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>🌍 Quiz du Monde</h1>
+
+    <div class="info">
+        <span>⏱️ Temps : <span id="time">10</span>s</span>
+        <span>⭐ Score : <span id="score">0</span></span>
+    </div>
+
+    <div id="quiz">
+        <div class="question" id="question"></div>
+        <div class="answers" id="answers"></div>
+    </div>
+
+    <div id="end" class="hidden">
+        <p class="result" id="finalScore"></p>
+        <button class="restart" onclick="restart()">Rejouer 🔄</button>
+    </div>
+</div>
+
+<!-- Sons -->
+<audio id="correctSound" src="https://www.soundjay.com/buttons/sounds/button-4.mp3"></audio>
+<audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+<audio id="endSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
