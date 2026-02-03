@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #11998e, #38ef7d);
+    background: linear-gradient(135deg, #ff9933, #ffffff, #009e60);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ body {
 
 .quiz-container {
     background: white;
-    width: 420px;
+    width: 450px;
     padding: 25px;
     border-radius: 12px;
     text-align: center;
@@ -39,14 +39,14 @@ h1 {
     margin: 8px 0;
     border: none;
     border-radius: 6px;
-    background: #11998e;
+    background: #009e60;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 
 .answers button:hover {
-    background: #0e7c72;
+    background: #007a4a;
 }
 
 .hidden {
@@ -63,8 +63,9 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: #28a745;
-    color: white;
+    background: #ff9933;
+    color: black;
     font-size: 16px;
     cursor: pointer;
 }
+
