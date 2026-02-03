@@ -1,54 +1,33 @@
-
 const questions = [
     {
-        question: "Quelle est la capitale politique de la Côte d’Ivoire ?",
-        answers: ["Abidjan", "Bouaké", "Yamoussoukro", "Daloa"],
+        question: "Quel est le plus grand continent du monde ?",
+        answers: ["Afrique", "Europe", "Asie", "Amérique"],
         correct: 2
     },
     {
-        question: "Quelle est la capitale économique de la Côte d’Ivoire ?",
-        answers: ["Yamoussoukro", "San Pedro", "Korhogo", "Abidjan"],
-        correct: 3
-    },
-    {
-        question: "Quel est le fleuve le plus long de la Côte d’Ivoire ?",
-        answers: ["Comoé", "Bandama", "Sassandra", "Cavally"],
+        question: "Quel est le plus long fleuve du monde ?",
+        answers: ["Nil", "Amazon", "Mississippi", "Congo"],
         correct: 1
     },
     {
-        question: "Combien de districts compte la Côte d’Ivoire ?",
-        answers: ["10", "12", "14", "16"],
+        question: "Quelle est la capitale du Japon ?",
+        answers: ["Séoul", "Pékin", "Tokyo", "Bangkok"],
         correct: 2
     },
     {
-        question: "Quelle est la monnaie utilisée en Côte d’Ivoire ?",
-        answers: ["Naira", "Franc CFA", "Cedi", "Euro"],
+        question: "Combien y a-t-il de continents sur Terre ?",
+        answers: ["5", "6", "7", "8"],
+        correct: 2
+    },
+    {
+        question: "Quel pays est le plus peuplé du monde ?",
+        answers: ["États-Unis", "Inde", "Chine", "Russie"],
         correct: 1
     },
     {
-        question: "Quel pays ne partage PAS de frontière avec la Côte d’Ivoire ?",
-        answers: ["Ghana", "Mali", "Guinée", "Nigeria"],
+        question: "Quel océan est le plus vaste ?",
+        answers: ["Atlantique", "Indien", "Arctique", "Pacifique"],
         correct: 3
-    },
-    {
-        question: "Quel est le principal produit d’exportation ivoirien ?",
-        answers: ["Café", "Cacao", "Riz", "Coton"],
-        correct: 1
-    },
-    {
-        question: "Quel est le plat traditionnel ivoirien ?",
-        answers: ["Thiéboudienne", "Attiéké", "Couscous", "Foutou"],
-        correct: 1
-    },
-    {
-        question: "Quelle langue est officielle en Côte d’Ivoire ?",
-        answers: ["Dioula", "Baoulé", "Bété", "Français"],
-        correct: 3
-    },
-    {
-        question: "Quel océan borde la Côte d’Ivoire ?",
-        answers: ["Océan Atlantique", "Océan Indien", "Mer Rouge", "Mer Méditerranée"],
-        correct: 0
     }
 ];
 
@@ -67,7 +46,7 @@ const endEl = document.getElementById("end");
 const finalScoreEl = document.getElementById("finalScore");
 
 // sons
-const goodSound = document.getElementById("goodSound");
+const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
 const endSound = document.getElementById("endSound");
 
@@ -108,7 +87,7 @@ function checkAnswer(i) {
     if (i === questions[index].correct) {
         score++;
         scoreEl.textContent = score;
-        goodSound.play(); // 🎵 son doux "bien joué"
+        correctSound.play();
     } else {
         wrongSound.play();
     }
@@ -129,8 +108,7 @@ function endGame() {
     quizEl.classList.add("hidden");
     endEl.classList.remove("hidden");
     endSound.play();
-    finalScoreEl.textContent =
-        `🏆 Ton score : ${score} / ${questions.length}`;
+    finalScoreEl.textContent = `🏆 Ton score final : ${score} / ${questions.length}`;
 }
 
 function restart() {
@@ -142,5 +120,6 @@ function restart() {
     showQuestion();
 }
 
+// démarrage
 showQuestion();
 
